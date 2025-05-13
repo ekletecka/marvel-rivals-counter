@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Marvel Rivals Hero-Pick Tool</title>
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+ <style>
+ body { padding: 20px; }
+ .hero-section, .map-section { margin-bottom: 20px; }
+ #results, #map-results { margin-top: 20px; }
+ </style>
+</head>
+<body>
+ <div class="container">
+ <h1 class="text-center">Marvel Rivals Hero-Pick Tool</h1>
+ 
+ <!-- Enemy Hero Selection Section -->
+ <div class="hero-section">
+ <h3>Select Enemy Team Heroes</h3>
+ <div class="row">
+ <div class="col-md-2"><select class="form-select" id="enemy1"><option value="">Select Hero</option></select></div>
+ <div class="col-md-2"><select class="form-select" id="enemy2"><option value="">Select Hero</option></select></div>
+ <div class="col-md-2"><select class="form-select" id="enemy3"><option value="">Select Hero</option></select></div>
+ <div class="col-md-2"><select class="form-select" id="enemy4"><option value="">Select Hero</option></select></div>
+ <div class="col-md-2"><select class="form-select" id="enemy5"><option value="">Select Hero</option></select></div>
+ <div class="col-md-2"><select class="form-select" id="enemy6"><option value="">Select Hero</option></select></div>
+ </div>
+ </div>
+ 
+ <button class="btn btn-primary" onclick="getCounterPicks()">Get Counter-Picks</button>
+ 
+ <!-- Map Selection Section -->
+ <div class="map-section">
+ <h3>Select Map</h3>
+ <div class="row">
+ <div class="col-md-4">
+ <select class="form-select" id="map-select">
+ <option value="">Select Map</option>
+ <option value="Tokyo 2099: Shin-Shibuya">Tokyo 2099: Shin-Shibuya</option>
+ <option value="Tokyo 2099: Spider-Islands">Tokyo 2099: Spider-Islands</option>
+ <option value="Yggsard: Yggdrasil Path">Yggsard: Yggdrasil Path</option>
+ <option value="Yggsard: Royal Palace">Yggsard: Royal Palace</option>
+ <option value="Wakanda: Hall of Djalia">Wakanda: Hall of Djalia</option>
+ <option value="Wakanda: Birnin T'Challa">Wakanda: Birnin T'Challa</option>
+ <option value="Klyntar: Symbiotic Surface">Klyntar: Symbiotic Surface</option>
+ <option value="Hydra Charteris Base: Hell's Heaven">Hydra Charteris Base: Hell's Heaven</option>
+ <option value="Empire of Eternal Night: Midtown">Empire of Eternal Night: Midtown</option>
+ <option value="Empire of Eternal Night: Central Park">Empire of Eternal Night: Central Park</option>
+ <option value="Sanctum Sanctorum">Sanctum Sanctorum</option>
+ <option value="Intergalactic Empire of Wakanda: Royal Necropolis">Intergalactic Empire of Wakanda: Royal Necropolis</option>
+ </select>
+ </div>
+ </div>
+ <button class="btn btn-primary mt-2" onclick="getMapRecommendations()">Get Map Recommendations</button>
+ </div>
+ 
+ <!-- Results Sections -->
+ <div id="map-results" class="mt-3"></div>
+ <div id="results" class="mt-3"></div>
+ </div>
+ 
+ <script src="script.js"></script>
+</body>
+</html>
